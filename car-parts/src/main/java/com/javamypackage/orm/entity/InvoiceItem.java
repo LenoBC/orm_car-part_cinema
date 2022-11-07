@@ -1,7 +1,4 @@
-package com.javamypackage.orm.invoiceitem.entity;
-
-import com.javamypackage.orm.invoice.entity.Invoice;
-import com.javamypackage.orm.part.entity.Part;
+package com.javamypackage.orm.entity;
 
 import javax.persistence.*;
 
@@ -25,9 +22,12 @@ public class InvoiceItem {
 
     public InvoiceItem() {}
 
-    public InvoiceItem(Integer amount, Float price) {
+    public InvoiceItem(Integer amount, Float price, Float total_value, Invoice invoice, Part part) {
         this.amount = amount;
         this.price = price;
+        this.total_value = total_value;
+        this.invoice = invoice;
+        this.part = part;
     }
 
     public Long getId() {
@@ -48,5 +48,29 @@ public class InvoiceItem {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public Float getTotal_value() {
+        return total_value;
+    }
+
+    public void setTotal_value(Float total_value) {
+        this.total_value = total_value;
+    }
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
+    }
+
+    public Part getPart() {
+        return part;
+    }
+
+    public void setPart(Part part) {
+        this.part = part;
     }
 }

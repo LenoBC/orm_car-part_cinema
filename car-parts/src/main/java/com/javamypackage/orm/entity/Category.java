@@ -1,10 +1,7 @@
-package com.javamypackage.orm.category.entity;
-
-import com.javamypackage.orm.part.entity.Part;
+package com.javamypackage.orm.entity;
 
 import javax.persistence.*;
 import java.util.Set;
-
 
 @Entity
 @Table(name = "categories")
@@ -21,10 +18,11 @@ public class Category
 
     public Category() {}
 
-    public Category(String name, String symbol, String description) {
+    public Category(String name, String symbol, String description, Set<Part> parts) {
         this.name = name;
         this.symbol = symbol;
         this.description = description;
+        this.parts = parts;
     }
 
     public Long getId() {
@@ -53,5 +51,13 @@ public class Category
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Set<Part> getParts() {
+        return parts;
+    }
+
+    public void setParts(Set<Part> parts) {
+        this.parts = parts;
     }
 }

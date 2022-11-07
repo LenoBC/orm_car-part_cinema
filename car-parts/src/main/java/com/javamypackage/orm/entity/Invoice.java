@@ -1,7 +1,4 @@
-package com.javamypackage.orm.invoice.entity;
-
-import com.javamypackage.orm.invoiceitem.entity.InvoiceItem;
-import com.javamypackage.orm.user.entity.User;
+package com.javamypackage.orm.entity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -24,8 +21,10 @@ public class Invoice {
 
     public Invoice() {}
 
-    public Invoice(Date data_sale) {
+    public Invoice(Date data_sale, User user, Set<InvoiceItem> invoiceItems) {
         this.data_sale = data_sale;
+        this.user = user;
+        this.invoiceItems = invoiceItems;
     }
 
     public Long getId() {
@@ -40,4 +39,19 @@ public class Invoice {
         this.data_sale = data_sale;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Set<InvoiceItem> getInvoiceItems() {
+        return invoiceItems;
+    }
+
+    public void setInvoiceItems(Set<InvoiceItem> invoiceItems) {
+        this.invoiceItems = invoiceItems;
+    }
 }

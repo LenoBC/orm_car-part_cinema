@@ -1,8 +1,4 @@
-package com.javamypackage.orm.part.entity;
-
-import com.javamypackage.orm.car.entity.Car;
-import com.javamypackage.orm.category.entity.Category;
-import com.javamypackage.orm.invoiceitem.entity.InvoiceItem;
+package com.javamypackage.orm.entity;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -22,27 +18,26 @@ public class Part {
     @JoinColumn(name="category_id")
     private Category category;
 
-    @ManyToMany(mappedBy = "parts")
-    private Set<Car> cars;
+    @OneToMany(mappedBy = "part")
+    private Set<CarsParts> carsParts;
 
     @OneToOne(mappedBy = "part")
     private InvoiceItem invoiceItem;
 
     public Part() {}
 
-    public Part(String name, String symbol, String description, Float price) {
+    public Part(String name, String symbol, String description, Float price, Category category, Set<CarsParts> carsParts, InvoiceItem invoiceItem) {
         this.name = name;
         this.symbol = symbol;
         this.description = description;
         this.price = price;
+        this.category = category;
+        this.carsParts = carsParts;
+        this.invoiceItem = invoiceItem;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public Category getCategory() {
-        return category;
     }
 
     public String getName() {
@@ -75,5 +70,29 @@ public class Part {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Set<CarsParts> getCarsParts() {
+        return carsParts;
+    }
+
+    public void setCarsParts(Set<CarsParts> carsParts) {
+        this.carsParts = carsParts;
+    }
+
+    public InvoiceItem getInvoiceItem() {
+        return invoiceItem;
+    }
+
+    public void setInvoiceItem(InvoiceItem invoiceItem) {
+        this.invoiceItem = invoiceItem;
     }
 }

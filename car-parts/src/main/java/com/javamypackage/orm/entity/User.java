@@ -1,6 +1,4 @@
-package com.javamypackage.orm.user.entity;
-
-import com.javamypackage.orm.invoice.entity.Invoice;
+package com.javamypackage.orm.entity;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -21,11 +19,12 @@ public class User {
 
     public User() {}
 
-    public User(String email, String name, String surname, String phone_number) {
+    public User(String email, String name, String surname, String phone_number, Set<Invoice> invoices) {
         this.email = email;
         this.name = name;
         this.surname = surname;
         this.phone_number = phone_number;
+        this.invoices = invoices;
     }
 
     public Long getId() {
@@ -62,5 +61,13 @@ public class User {
 
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
+    }
+
+    public Set<Invoice> getInvoices() {
+        return invoices;
+    }
+
+    public void setInvoices(Set<Invoice> invoices) {
+        this.invoices = invoices;
     }
 }
