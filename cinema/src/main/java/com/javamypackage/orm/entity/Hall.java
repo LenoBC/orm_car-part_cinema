@@ -7,7 +7,7 @@ import java.util.Set;
 @Table(name = "halls")
 public class Hall {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer number_of_seats;
     private Integer hall_number;

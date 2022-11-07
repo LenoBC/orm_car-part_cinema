@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "invoice_items")
 public class InvoiceItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer amount;
     private Float price;

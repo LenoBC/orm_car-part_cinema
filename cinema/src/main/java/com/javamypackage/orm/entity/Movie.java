@@ -7,7 +7,7 @@ import java.util.Set;
 @Table(name = "movies")
 public class Movie {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer number_of_views;
     private String title;

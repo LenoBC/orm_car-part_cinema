@@ -8,7 +8,7 @@ import java.util.Set;
 @Table(name = "invoices")
 public class Invoice {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date data_sale;
 

@@ -8,7 +8,7 @@ import java.util.Set;
 @Table(name = "seances")
 public class Seance {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date date_seance;
 
