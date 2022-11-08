@@ -10,7 +10,7 @@ public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date data_sale;
+    private Date date_sale;
 
     @ManyToOne
     @JoinColumn(name="user_id")
@@ -22,7 +22,7 @@ public class Invoice {
     public Invoice() {}
 
     public Invoice(Date data_sale, User user, Set<InvoiceItem> invoiceItems) {
-        this.data_sale = data_sale;
+        this.date_sale = data_sale;
         this.user = user;
         this.invoiceItems = invoiceItems;
     }
@@ -32,11 +32,11 @@ public class Invoice {
     }
 
     public Date getData_sale() {
-        return data_sale;
+        return date_sale;
     }
 
     public void setData_sale(Date data_sale) {
-        this.data_sale = data_sale;
+        this.date_sale = data_sale;
     }
 
     public User getUser() {
