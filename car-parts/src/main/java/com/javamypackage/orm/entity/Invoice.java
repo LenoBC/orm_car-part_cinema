@@ -27,6 +27,16 @@ public class Invoice {
         this.invoiceItems = invoiceItems;
     }
 
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "id=" + id +
+                ", date_sale=" + date_sale +
+                ", user=" + user +
+                ", invoiceItems=" + invoiceItems +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

@@ -27,6 +27,17 @@ public class User {
         this.invoices = invoices;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

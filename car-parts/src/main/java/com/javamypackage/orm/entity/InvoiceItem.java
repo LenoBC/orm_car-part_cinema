@@ -30,6 +30,18 @@ public class InvoiceItem {
         this.part = part;
     }
 
+    @Override
+    public String toString() {
+        return "InvoiceItem{" +
+                "id=" + id +
+                ", amount=" + amount +
+                ", price=" + price +
+                ", total_value=" + total_value +
+                ", invoice=" + invoice +
+                ", part=" + part +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

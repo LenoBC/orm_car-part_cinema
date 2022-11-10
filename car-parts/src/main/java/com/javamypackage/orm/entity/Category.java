@@ -25,6 +25,16 @@ public class Category
         this.parts = parts;
     }
 
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

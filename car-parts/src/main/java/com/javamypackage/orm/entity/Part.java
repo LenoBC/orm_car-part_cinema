@@ -36,6 +36,16 @@ public class Part {
         this.invoiceItem = invoiceItem;
     }
 
+    @Override
+    public String toString() {
+        return "Part{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", price=" + price +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

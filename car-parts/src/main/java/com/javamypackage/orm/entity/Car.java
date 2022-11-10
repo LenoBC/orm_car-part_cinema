@@ -25,6 +25,16 @@ public class Car {
         this.carsParts = carsParts;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", brand='" + brand + '\'' +
+                ", generation='" + generation + '\'' +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

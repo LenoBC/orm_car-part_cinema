@@ -23,6 +23,15 @@ public class CarsParts {
         this.car = car;
     }
 
+    @Override
+    public String toString() {
+        return "CarsParts{" +
+                "id=" + id +
+                ", part=" + part +
+                ", car=" + car +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }
