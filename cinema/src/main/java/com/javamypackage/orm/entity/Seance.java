@@ -31,6 +31,20 @@ public class Seance {
         this.tickets = tickets;
     }
 
+    public Seance(Date date_seance) {
+        this.date_seance = date_seance;
+    }
+
+    @Override
+    public String toString() {
+        return "Seance{" +
+                "id=" + id +
+                ", date_seance=" + date_seance +
+                ", hall=" + hall +
+                ", movie=" + movie.toString() +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

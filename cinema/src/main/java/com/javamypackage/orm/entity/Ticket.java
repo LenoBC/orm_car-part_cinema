@@ -36,6 +36,21 @@ public class Ticket {
         this.user = user;
     }
 
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", is_discount=" + is_discount +
+                ", is_student=" + is_student +
+                ", reservation=" + reservation +
+                ", approved_reservation=" + approved_reservation +
+                ", amount_of_seats=" + amount_of_seats +
+                ", date_of_purchase=" + date_of_purchase +
+                ", seance=" + seance.toString() +
+                ", user=" + user.toString() +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

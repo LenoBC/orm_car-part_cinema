@@ -24,6 +24,19 @@ public class Movie {
         this.seances = seances;
     }
 
+    public Movie(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", number_of_views=" + number_of_views +
+                ", title='" + title + '\'' +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

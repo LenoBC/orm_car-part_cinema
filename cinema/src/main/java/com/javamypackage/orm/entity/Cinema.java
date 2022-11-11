@@ -22,6 +22,14 @@ public class Cinema {
         this.halls = halls;
     }
 
+    @Override
+    public String toString() {
+        return "Cinema{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

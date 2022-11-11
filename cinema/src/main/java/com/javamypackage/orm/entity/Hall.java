@@ -28,6 +28,16 @@ public class Hall {
         this.seances = seances;
     }
 
+    @Override
+    public String toString() {
+        return "Hall{" +
+                "id=" + id +
+                ", number_of_seats=" + number_of_seats +
+                ", hall_number=" + hall_number +
+                ", cinema=" + cinema.toString() +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

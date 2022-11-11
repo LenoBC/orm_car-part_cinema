@@ -33,6 +33,23 @@ public class User {
         this.tickets = tickets;
     }
 
+    public User(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", email='" + email + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", create_date=" + create_date +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }
