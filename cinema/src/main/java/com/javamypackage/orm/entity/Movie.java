@@ -9,7 +9,7 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer number_of_views;
+    private Integer numberOfViews;
     private String title;
 
     @OneToMany(mappedBy = "movie")
@@ -19,7 +19,7 @@ public class Movie {
     }
 
     public Movie(Integer number_of_views, String title, Set<Seance> seances) {
-        this.number_of_views = number_of_views;
+        this.numberOfViews = number_of_views;
         this.title = title;
         this.seances = seances;
     }
@@ -32,7 +32,7 @@ public class Movie {
     public String toString() {
         return "Movie{" +
                 "id=" + id +
-                ", number_of_views=" + number_of_views +
+                ", number_of_views=" + numberOfViews +
                 ", title='" + title + '\'' +
                 '}';
     }
@@ -42,11 +42,11 @@ public class Movie {
     }
 
     public Integer getNumber_of_views() {
-        return number_of_views;
+        return numberOfViews;
     }
 
     public void setNumber_of_views(Integer number_of_views) {
-        this.number_of_views = number_of_views;
+        this.numberOfViews = number_of_views;
     }
 
     public String getTitle() {

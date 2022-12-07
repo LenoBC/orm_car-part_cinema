@@ -9,12 +9,12 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Boolean is_discount;
-    private Boolean is_student;
+    private Boolean isDiscount;
+    private Boolean isStudent;
     private Boolean reservation;
-    private Boolean approved_reservation;
-    private Integer amount_of_seats;
-    private Date date_of_purchase;
+    private Boolean approvedReservation;
+    private Integer amountOfSeats;
+    private Date dateOfPurchase;
 
     @ManyToOne
     private Seance seance;
@@ -25,13 +25,13 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(Boolean is_discount, Boolean is_student, Boolean reservation, Boolean approved_reservation, Integer amount_of_seats, Date date_of_purchase, Seance seance, User user) {
-        this.is_discount = is_discount;
-        this.is_student = is_student;
+    public Ticket(Boolean isDiscount, Boolean isStudent, Boolean reservation, Boolean approvedReservation, Integer amountOfSeats, Date dateOfPurchase, Seance seance, User user) {
+        this.isDiscount = isDiscount;
+        this.isStudent = isStudent;
         this.reservation = reservation;
-        this.approved_reservation = approved_reservation;
-        this.amount_of_seats = amount_of_seats;
-        this.date_of_purchase = date_of_purchase;
+        this.approvedReservation = approvedReservation;
+        this.amountOfSeats = amountOfSeats;
+        this.dateOfPurchase = dateOfPurchase;
         this.seance = seance;
         this.user = user;
     }
@@ -40,12 +40,12 @@ public class Ticket {
     public String toString() {
         return "Ticket{" +
                 "id=" + id +
-                ", is_discount=" + is_discount +
-                ", is_student=" + is_student +
+                ", isDiscount=" + isDiscount +
+                ", isStudent=" + isStudent +
                 ", reservation=" + reservation +
-                ", approved_reservation=" + approved_reservation +
-                ", amount_of_seats=" + amount_of_seats +
-                ", date_of_purchase=" + date_of_purchase +
+                ", approvedReservation=" + approvedReservation +
+                ", amountOfSeats=" + amountOfSeats +
+                ", dateOfPurchase=" + dateOfPurchase +
                 ", seance=" + seance.toString() +
                 ", user=" + user.toString() +
                 '}';
@@ -55,20 +55,20 @@ public class Ticket {
         return id;
     }
 
-    public Boolean getIs_discount() {
-        return is_discount;
+    public Boolean getIsDiscount() {
+        return isDiscount;
     }
 
-    public void setIs_discount(Boolean is_discount) {
-        this.is_discount = is_discount;
+    public void setIsDiscount(Boolean isDiscount) {
+        this.isDiscount = isDiscount;
     }
 
-    public Boolean getIs_student() {
-        return is_student;
+    public Boolean getIsStudent() {
+        return isStudent;
     }
 
-    public void setIs_student(Boolean is_student) {
-        this.is_student = is_student;
+    public void setIsStudent(Boolean isStudent) {
+        this.isStudent = isStudent;
     }
 
     public Boolean getReservation() {
@@ -79,28 +79,28 @@ public class Ticket {
         this.reservation = reservation;
     }
 
-    public Boolean getApproved_reservation() {
-        return approved_reservation;
+    public Boolean getApprovedReservation() {
+        return approvedReservation;
     }
 
-    public void setApproved_reservation(Boolean approved_reservation) {
-        this.approved_reservation = approved_reservation;
+    public void setApprovedReservation(Boolean approvedReservation) {
+        this.approvedReservation = approvedReservation;
     }
 
-    public Integer getAmount_of_seats() {
-        return amount_of_seats;
+    public Integer getAmountOfSeats() {
+        return amountOfSeats;
     }
 
-    public void setAmount_of_seats(Integer amount_of_seats) {
-        this.amount_of_seats = amount_of_seats;
+    public void setAmountOfSeats(Integer amountOfSeats) {
+        this.amountOfSeats = amountOfSeats;
     }
 
-    public Date getDate_of_purchase() {
-        return date_of_purchase;
+    public Date getDateOfPurchase() {
+        return dateOfPurchase;
     }
 
-    public void setDate_of_purchase(Date date_of_purchase) {
-        this.date_of_purchase = date_of_purchase;
+    public void setDateOfPurchase(Date dateOfPurchase) {
+        this.dateOfPurchase = dateOfPurchase;
     }
 
     public Seance getSeance() {

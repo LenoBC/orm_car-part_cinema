@@ -10,7 +10,7 @@ public class Seance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date date_seance;
+    private Date dateSeance;
 
     @ManyToOne
     private Hall hall;
@@ -25,21 +25,21 @@ public class Seance {
     }
 
     public Seance(Date date_seance, Hall hall, Movie movie, Set<Ticket> tickets) {
-        this.date_seance = date_seance;
+        this.dateSeance = date_seance;
         this.hall = hall;
         this.movie = movie;
         this.tickets = tickets;
     }
 
     public Seance(Date date_seance) {
-        this.date_seance = date_seance;
+        this.dateSeance = date_seance;
     }
 
     @Override
     public String toString() {
         return "Seance{" +
                 "id=" + id +
-                ", date_seance=" + date_seance +
+                ", date_seance=" + dateSeance +
                 ", hall=" + hall +
                 ", movie=" + movie.toString() +
                 '}';
@@ -50,11 +50,11 @@ public class Seance {
     }
 
     public Date getDate_seance() {
-        return date_seance;
+        return dateSeance;
     }
 
     public void setDate_seance(Date date_seance) {
-        this.date_seance = date_seance;
+        this.dateSeance = date_seance;
     }
 
     public Hall getHall() {

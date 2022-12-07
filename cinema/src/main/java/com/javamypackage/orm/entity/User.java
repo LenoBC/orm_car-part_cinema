@@ -15,7 +15,7 @@ public class User {
     private String email;
     private String login;
     private String password;
-    private Date create_date;
+    private Date createDate;
 
     @OneToMany(mappedBy = "user")
     private Set<Ticket> tickets;
@@ -29,7 +29,7 @@ public class User {
         this.email = email;
         this.login = login;
         this.password = password;
-        this.create_date = create_date;
+        this.createDate = create_date;
         this.tickets = tickets;
     }
 
@@ -46,7 +46,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
-                ", create_date=" + create_date +
+                ", create_date=" + createDate +
                 '}';
     }
 
@@ -95,11 +95,11 @@ public class User {
     }
 
     public Date getCreate_date() {
-        return create_date;
+        return createDate;
     }
 
     public void setCreate_date(Date create_date) {
-        this.create_date = create_date;
+        this.createDate = create_date;
     }
 
     public Set<Ticket> getTickets() {

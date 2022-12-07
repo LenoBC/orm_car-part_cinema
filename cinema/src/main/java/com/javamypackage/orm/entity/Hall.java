@@ -9,8 +9,8 @@ public class Hall {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Integer number_of_seats;
-    private Integer hall_number;
+    private Integer numberOfSeats;
+    private String hallName;
 
     @ManyToOne
     private Cinema cinema;
@@ -21,9 +21,9 @@ public class Hall {
     public Hall() {
     }
 
-    public Hall(Integer number_of_seats, Integer hall_number, Cinema cinema, Set<Seance> seances) {
-        this.number_of_seats = number_of_seats;
-        this.hall_number = hall_number;
+    public Hall(Integer number_of_seats, String hallName, Cinema cinema, Set<Seance> seances) {
+        this.numberOfSeats = number_of_seats;
+        this.hallName = hallName;
         this.cinema = cinema;
         this.seances = seances;
     }
@@ -32,8 +32,8 @@ public class Hall {
     public String toString() {
         return "Hall{" +
                 "id=" + id +
-                ", number_of_seats=" + number_of_seats +
-                ", hall_number=" + hall_number +
+                ", number_of_seats=" + numberOfSeats +
+                ", hall_number=" + hallName +
                 ", cinema=" + cinema.toString() +
                 '}';
     }
@@ -43,19 +43,19 @@ public class Hall {
     }
 
     public Integer getNumber_of_seats() {
-        return number_of_seats;
+        return numberOfSeats;
     }
 
     public void setNumber_of_seats(Integer number_of_seats) {
-        this.number_of_seats = number_of_seats;
+        this.numberOfSeats = number_of_seats;
     }
 
-    public Integer getHall_number() {
-        return hall_number;
+    public String getHall_number() {
+        return hallName;
     }
 
-    public void setHall_number(Integer hall_number) {
-        this.hall_number = hall_number;
+    public void setHall_number(String hallName) {
+        this.hallName = hallName;
     }
 
     public Cinema getCinema() {
